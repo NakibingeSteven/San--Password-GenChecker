@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SAN Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="password-form">
+        <h1>SAN Password GenChecker</h1>
+        <label for="password-length">Password length:</label>
+        <input type="number" id="password-length" name="password-length" min="4" max="50" value="12">
+
+        <label for="include-uppercase">Include uppercase letters:</label>
+        <input type="checkbox" id="include-uppercase" name="include-uppercase" checked>
+
+        <label for="include-lowercase">Include lowercase letters:</label>
+        <input type="checkbox" id="include-lowercase" name="include-lowercase" checked>
+
+        <label for="include-numbers">Include numbers:</label>
+        <input type="checkbox" id="include-numbers" name="include-numbers" checked>
+
+        <label for="include-symbols">Include symbols:</label>
+        <input type="checkbox" id="include-symbols" name="include-symbols" checked>
+
+        <input type="button" id="generate-password" value="Generate Password">
+
+        <div class="password-box">
+            
+            <div id="generated-password"></div>
+        </div>
+
+        <div class="password-box">
+            <span id="password-display"></span>
+            <button type="button" id="copy-password" disabled>Copy to Clipboard</button>
+            <button type="button" id="save-password" class="save-to-file" disabled>Save to File</button>
+        </div>
+
+        <div class="password-history">
+            <div id="password-strength"></div>
+        </div>
+
+    </div>
+    <script src="file.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
